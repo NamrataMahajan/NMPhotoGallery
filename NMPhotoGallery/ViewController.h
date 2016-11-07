@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIImagePickerControllerDelegate,MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate>
 
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)OpenAction:(id)sender;
+- (IBAction)OpenPhotoAction:(id)sender;
+- (IBAction)MailAction:(id)sender;
 
 @end
 
